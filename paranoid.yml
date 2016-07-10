@@ -1,0 +1,9 @@
+---
+
+- name: Paranoid base playbook
+  connection: local
+  hosts: localhost
+  become: true
+  roles:
+    - base
+    
