@@ -1,9 +1,8 @@
 ---
-
-- name: Paranoid base playbook
-  connection: local
-  hosts: localhost
-  become: true
-  roles:
-    - base
-    
+- hosts: all
+  sudo: yes
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: check alive servers
+        ping:
